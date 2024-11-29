@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="login-form">
+            <form id="loginform">
+                <div class="input-group">
+                    <label for="Name">Name</label>
+                    <input id="Name" placeholder="Enter your Name">
+                </div>
+                <button id="login" type="button" onclick="func()">LOG IN</button>
+            </form>
+        </div>
+    </div>
+    <script src="js.js">
+    
+        function func(){
+            var la = document.getElementById("Name").value;
+            if (la === ""){
+                alert("Put yo name you sussy baka")
+            } else {
+                window.location.assign("certificate.html?username=" + encodeURIComponent(name));
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>
+
