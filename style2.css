@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 10;
+    background-color: cyan;
+    font-family: Arial, sans-serif;
+    background-image: url("GOJODAZAI.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.container {
+    text-align: center;
+    height: 25%;
+    width: 30%;
+    border-radius: 20px;
+    background-color: #e53935;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: white;
+}
+
+.buttons {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 20px; 
+}
+
+.yes {
+    background-color: #4caf50;
+    color: white;
+}
+
+.yes:hover {
+    background-color: #45a049;
+}
+
+.no {
+    background-color: #f44336;
+    color: white;
+    position:absolute;
+    transition: left 0.4s ease-out, top 0.4s ease-out; /* Smooth transition for movement */
+}
+
+.no:hover {
+    background-color: #d32f2f;
+}
