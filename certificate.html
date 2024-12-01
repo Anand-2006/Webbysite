@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f3f4f6;
+        }
+        .certificate {
+            width: 800px;
+            height: 600px;
+            padding: 20px;
+            text-align: center;
+            border: 10px solid #1a202c;
+            background: #fff;
+            position: relative;
+        }
+        .certificate h1 {
+            font-size: 3em;
+            color: #2d3748;
+            margin: 20px 0;
+        }
+        .certificate p {
+            font-size: 1.2em;
+            color: #4a5568;
+            margin: 20px 0;
+        }
+        .certificate .name {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2b6cb0;
+        }
+        .download-btn {
+            margin-top: 20%px;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background: #2b6cb0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .download-btn:hover {
+            background: #2c5282;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate" id="certificate">
+        <h1>Certificate of Gay</h1><br>
+        <p>Wow, look at you, being all brave and authentic! Coming out takes guts—seriously, not everyone can pull it off with such flair. Honestly, your honesty is kind of intimidating, but in the best way.<br> Just so you know, you’re absolutely loved and valued, even if you insist on being your fabulous self. It’s a big deal, and I’m here to cheer you on—unless you start stealing my spotlight, then we might have issues.</p>
+        <p> You’re an Authentic Gay and you arent escaping the GAY ALLEGATIONS.</p>
+        <p class="name">
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const userName = urlParams.get('username');
+                console.log(username);
+                document.querySelector('.name').textContent =decodeURIComponent(userName) ;
+                
+            </script>
+        </p>
+        <p>Date: <script>document.write(new Date().toLocaleDateString());</script></p>
+        <a class="download-btn" id="download-btn">Download Certificate</a>
+    </div>
+
+    <script>
+        document.getElementById('download-btn').addEventListener('click', () => {
+            html2canvas(document.getElementById('certificate')).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'certificate.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>
